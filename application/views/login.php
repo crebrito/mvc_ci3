@@ -14,18 +14,18 @@
 				<div class="form-group">
 					<h1>Login</h1>
 				</div>
-				<div class="form-group">
+				<div class="form-group" id="email">
 					<label for="exampleInputEmail1">Correo</label>
 					<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email">
 					<div class="invalid-feedback">
-						<?= form_error('email'); ?>
+
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" id="password">
 					<label for="exampleInputPassword1">Contraseña</label>
 					<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
 					<div class="invalid-feedback">
-						<?= form_error('password'); ?>
+
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary">Ingresar</button>

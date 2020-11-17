@@ -14,9 +14,9 @@
 - [x] 10. Modelos
 - [x] 11. Validaciones de formularios
 - [x] 12. Bootstrap + Assets OK
-- [ ] 13. Validando Login
-- [ ] 14. Ajax 1
-- [ ] 15. Ajax 2
+- [x] 13. Validando Login
+- [x] 14. Ajax 1
+- [x] 15. Ajax 2
 - [ ] 16. Modelo de login
 - [ ] 17. Ajax 3
 - [ ] 18. Sesiones

@@ -9,8 +9,20 @@
 				var json = JSON.parse(data);
 				console.log(json);
 			},
-			error: function(){
-
+			error: function(xhr){
+				if(xhr.status == 400){
+					$("#email > input").removeClass("is-invalid");
+					$("#password > input").removeClass("is-invalid");
+					var json = JSON.parse(xhr.responseText);
+					if(json.email.length != 0){
+						$("#email > div").html(json.email);
+						$("#email > input").addClass("is-invalid");
+					}
+					if(json.password.length != 0){
+						$("#password > div").html(json.password);
+						$("#password > input").addClass("is-invalid");
+					}
+				}
 			},
 		});
 	});
