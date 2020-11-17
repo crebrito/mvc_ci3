@@ -1,6 +1,6 @@
-#MVC CodeIgniter 3
+# MVC CodeIgniter 3
 
-##Videos:
+## Videos:
 
 - [x] 1. Introducción
 - [x] 2. Instalación y MVC
