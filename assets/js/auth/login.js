@@ -6,7 +6,9 @@
 			type: 'POST',
 			data: $(this).serialize(),
 			success: function(err){
-				// console.log(err);
+				var json = JSON.parse(err);
+				//console.log(json);
+				window.location.replace(json.url);
 			},
 			statusCode: {
 				400: function(xhr){
