@@ -28,7 +28,11 @@
 
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary">Ingresar</button>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Ingresar</button>
+				</div>
+				<div class="form-group" id="alert">
+				</div>
 			</form>
 		</div>
 	</div>

@@ -18,7 +18,7 @@
 - [x] 14. Ajax 1
 - [x] 15. Ajax 2
 - [x] 16. Modelo de login
-- [ ] 17. Ajax 3
+- [x] 17. Ajax 3
 - [ ] 18. Sesiones
 - [ ] 19. Templates
 - [ ] 20. Alta de usuarios

@@ -1,16 +1,15 @@
 (function($){
 	$("#frm_login").submit(function(ev){
-		ev.preventDefault();
+		$("#alert").html("");
 		$.ajax({
 			url: 'login/validate',
 			type: 'POST',
 			data: $(this).serialize(),
-			success: function(data){
-				var json = JSON.parse(data);
-				console.log(json);
+			success: function(err){
+				// console.log(err);
 			},
-			error: function(xhr){
-				if(xhr.status == 400){
+			statusCode: {
+				400: function(xhr){
 					$("#email > input").removeClass("is-invalid");
 					$("#password > input").removeClass("is-invalid");
 					var json = JSON.parse(xhr.responseText);
@@ -22,12 +21,14 @@
 						$("#password > div").html(json.password);
 						$("#password > input").addClass("is-invalid");
 					}
-				} else if(xhr.status == 401) {
+				},
+				401: function(xhr){
 					var json = JSON.parse(xhr.responseText);
-					console.log(json);
+					//console.log(json);
+					$("#alert").html('<div class="alert alert-danger" role="alert">' + json.msg + '</div>')
 				}
-			},
+			}
 		});
+		ev.preventDefault();
 	});
-
 })(jQuery)
